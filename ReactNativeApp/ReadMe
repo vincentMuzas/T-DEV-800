@@ -1,0 +1,16 @@
+Required:
+
+* JDK installed
+* An Android SDK (> Android 9)
+* npm installed
+* npx installed (npm packet)
+
+You need to set env paths:
+* ANDROID_SDK_ROOT = C:\Users\$USER\AppData\Local\Android\Sdk
+* NVM_HOME = C:\Users\$USER\AppData\Roaming\nvm
+* NVM_SYMLINK = C:\Program Files\nodejs
+* PATH = %NVM_HOME%;%NVM_SYMLINK%;C:\Users\$USER\AppData\Local\Android\Sdk\platform-tools
+
+Then execute this command inside the ReactNativeApp folder and install everything it tells you to
+
+* npx react-native run-android

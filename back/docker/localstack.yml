@@ -1,0 +1,17 @@
+version: '2'
+services:
+  localstack:
+    image: localstack/localstack
+    ports:
+      - '4566:4566'
+    environment:
+      - SERVICES=s3
+      - DEFAULT_REGION=us-west-2
+      - AWS_DEFAULT_REGION=us-west-2
+      - HOSTNAME_EXTERNAL=localhost
+      - USE_SQL=false
+      - DATA_DIR=/tmp/localstack/data
+      - DEBUG=1
+    volumes:
+      - '/tmp/localstack:/tmp/localstack'
+      - ./.aws:/docker-entrypoint-initaws.d
